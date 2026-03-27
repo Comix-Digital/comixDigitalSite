@@ -1,0 +1,24 @@
+baseURL: ""
+locale: en-us
+title: Comix Digital
+theme: PaperMod
+
+params:
+  cover:
+    linkFullImages: true
+    responsiveImages: true
+  defaultTheme: light
+  disableThemeToggle: true
+  #label:
+    #icon: "images/comixLogoFull.png"
+    #text: ""
+    #iconHeight: 40
+#menu:
+#  main:
+#    - identifier: about
+#      name: About
+#      url: /about/
+#      weight: 10
+caches:
+  images:
+    dir: :cacheDir/images
