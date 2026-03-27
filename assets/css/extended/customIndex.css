@@ -1,0 +1,41 @@
+.customHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.CDLogo {
+    max-width:30vw;
+    max-height:30vw;
+    width: auto;
+    height: auto;
+}
+
+.aButton {
+    border: 0.2em solid var(--border);
+    border-radius: 10vw;
+    justify-content: center;
+    background-color: white;
+    flex-shrink: 1;
+    text-decoration: none;
+    box-shadow: 0 0px;
+    margin-bottom: 30vh;
+}
+
+a {
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+button {
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+a:hover {
+    transform: scale(95%);
+}
+
+button:hover {
+    transform: scale(95%);
+}

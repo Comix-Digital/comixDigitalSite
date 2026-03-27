@@ -13,12 +13,12 @@ params:
     #icon: "images/comixLogoFull.png"
     #text: ""
     #iconHeight: 40
-#menu:
-#  main:
-#    - identifier: about
-#      name: About
-#      url: /about/
-#      weight: 10
+menu:
+  main:
+    - identifier: test
+      name: Test
+      url: /test/
+      weight: 10
 caches:
   images:
     dir: :cacheDir/images
