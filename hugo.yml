@@ -9,10 +9,10 @@ params:
     responsiveImages: true
   defaultTheme: light
   disableThemeToggle: true
-  #label:
-    #icon: "images/comixLogoFull.png"
-    #text: ""
-    #iconHeight: 40
+  label:
+    icon: "images/mainblack.png"
+    text: " "
+    iconHeight: 40
 menu:
   main:
     - identifier: test
