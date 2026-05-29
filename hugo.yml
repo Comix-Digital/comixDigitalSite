@@ -10,9 +10,9 @@ params:
   defaultTheme: light
   disableThemeToggle: true
   label:
-    icon: "images/mainblack.png"
+    icon: "images/mainblackwhitebg.png"
     text: " "
-    iconHeight: 40
+    iconHeight: 50
 menu:
   main:
     - identifier: test

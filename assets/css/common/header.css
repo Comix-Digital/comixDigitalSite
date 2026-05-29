@@ -35,7 +35,8 @@
     border-radius: var(--radius);
     margin-inline-end: 8px;
     border: 2px solid var(--tertiary);
-    margin-top: 1px;
+    margin-top: 13px;
+    z-index: 10;
     background-color: white;
 }
 
