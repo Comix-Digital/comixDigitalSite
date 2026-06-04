@@ -9,6 +9,7 @@ params:
     responsiveImages: true
   defaultTheme: light
   disableThemeToggle: true
+  disableAnchoredHeadings: true
   label:
     icon: "images/mainblackwhitebg.png"
     text: " "
