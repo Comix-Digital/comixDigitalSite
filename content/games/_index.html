@@ -42,17 +42,50 @@
         jQuery('.gamesCol a').on('click', function(e) {
             e.preventDefault();
             link_to = $(this).attr('href');
+            const gameCover = $(this).children()[0];
+            const gameLink = $(this)[0];
+            const rect = gameCover.getBoundingClientRect();
+            const absoluteTop = rect.top + window.scrollY;
+            const absoluteLeft = rect.left + window.scrollX;
+            const placeholder = document.createElement('div');
+
+            placeholder.style.width = `${rect.width}px`;
+            placeholder.style.height = `${rect.height}px`;
+            placeholder.style.flexShrink = '0';
+            placeholder.style.flexGrow = window.getComputedStyle(gameCover).flexGrow;
+            gameCover.style.width = `${rect.width}px`;
+            gameCover.style.height = `${rect.height}px`;
+            gameCover.style.top = `${absoluteTop - 81}px `;
+            gameLink.insertBefore(placeholder, gameCover);
+            gameCover.style.position = 'absolute';
+
             gsap.to($(this), {
-                opacity: "50%",
+                marginBottom: "50vw",
                 duration: 0.5,
                 ease: "linear",
-                onComplete: wadw,
+            })
+
+            gsap.to($(gameCover), {
+                marginRight: "auto",
+                marginLeft: "calc(50% - 50vw)",
+                width: "100vw",
+                left: 0,
+                right: 0,
+                textAlign: "center",
+                top: `${window.scrollY - 82}px`,
+                maxWidth: "unset",
+                height: "56.25vw",
+                ease: "power3.out",
+                duration: 0.4,
+            })
+            gsap.to($(gameCover), {
+                duration: 0.5,
+                onComplete: openLink,
             })
         });
     });
 
-    function wadw (){
-        //open your link here
+    function openLink (){
         window.location.href = link_to;
     }
 </script>
