@@ -21,6 +21,9 @@
         <div class="gamesCol">
             <a href="tacticaldeathmatch">
                 <img src="/comixDigitalSite/images/tacticalDeathmatchArt1.png" alt="Tactical Deathmatch Keyart" id="tacticalDeathmatchKeyart" class="gameCover">
+                <div style="position: relative;">
+                    <img src="/comixDigitalSite/images/tacticalDeathmatchTextLogo.png" alt="Tactical Deathmatch Text Logo" id="tacticalDeathmatchTextLogo" class="gameCoverText">
+                </div>
             </a>
         </div>
         <div class="gamesCol">
@@ -48,6 +51,7 @@
             const absoluteTop = rect.top + window.scrollY;
             const absoluteLeft = rect.left + window.scrollX;
             const placeholder = document.createElement('div');
+            const textLogo = $(this)[0].querySelector('.gameCoverText');
 
             placeholder.style.width = `${rect.width}px`;
             placeholder.style.height = `${rect.height}px`;
@@ -57,7 +61,13 @@
             gameCover.style.height = `${rect.height}px`;
             gameCover.style.top = `${absoluteTop - 81}px `;
             gameLink.insertBefore(placeholder, gameCover);
+            textLogo.style.display = 'unset';
             gameCover.style.position = 'absolute';
+            gameCover.style.content = 'url("/comixDigitalSite/images/tacticalDeathmatchArt1NoText.png")';
+            console.log($(this).children()[2].tagName);
+            console.log($(this).children()[2].getBoundingClientRect());
+            console.log(window.scrollY);
+            console.log($(this).children()[2].getBoundingClientRect().y - window.scrollY);
 
             gsap.to($(this), {
                 marginBottom: "50vw",
@@ -75,7 +85,16 @@
                 top: `${window.scrollY - 82}px`,
                 maxWidth: "unset",
                 height: "56.25vw",
+                outline: "0px solid transparent",
+                borderRadius: "0px",
                 ease: "power3.out",
+                duration: 0.4,
+            })
+            
+            gsap.to($(textLogo), {
+                left: `${(window.innerWidth / 2) - ($(this).children()[2].getBoundingClientRect().x) - ((window.innerWidth / 100) * 20)}px`,
+                maxWidth: "unset",
+                width: "40vw",
                 duration: 0.4,
             })
             gsap.to($(gameCover), {
