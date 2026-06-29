@@ -59,6 +59,7 @@
             const absoluteLeft = rect.left + window.scrollX;
             const placeholder = document.createElement('div');
             const textLogo = $(this)[0].querySelector('.gameCoverText');
+            console.log(textLogo);
 
             placeholder.style.width = `${rect.width}px`;
             placeholder.style.height = `${rect.height}px`;
@@ -68,11 +69,15 @@
             gameCover.style.height = `${rect.height}px`;
             gameCover.style.top = `${absoluteTop - 81}px `;
             gameLink.insertBefore(placeholder, gameCover);
-            textLogo.style.display = 'unset';
+            if (textLogo !== null)
+            {
+                textLogo.style.display = 'unset';
+            }
             gameCover.style.position = 'absolute';
-            gameCover.style.content = 'url("/comixDigitalSite/images/tacticalDeathmatchArt1NoText.png")';
-            console.log($(this).children()[2].tagName);
-            console.log($(this).children()[2].getBoundingClientRect().x);
+            if (gameCover.id == "tacticalDeathmatchKeyart")
+            {
+                gameCover.style.content = 'url("/comixDigitalSite/images/tacticalDeathmatchArt1NoText.png")';
+            }
 
             gsap.to($(this), {
                 marginBottom: "50vw",
@@ -95,22 +100,23 @@
                 ease: "power3.out",
                 duration: 0.4,
             })
-            
-            gsap.to($(textLogo), {
-                left: `${(window.innerWidth / 2) - ((window.innerWidth / 100) * 20)}px`,
-                maxWidth: "unset",
-                width: "40vw",
-                duration: 0.4,
-                margin: 0,
-                bottom: "8.7vw",
-            })
+            if (textLogo !== null)
+            {
+                gsap.to($(textLogo), {
+                    left: `${(window.innerWidth / 2) - ((window.innerWidth / 100) * 20)}px`,
+                    maxWidth: "unset",
+                    width: "40vw",
+                    duration: 0.4,
+                    margin: 0,
+                    bottom: "8.7vw",
+                })
 
-            gsap.to($(this).children()[2], {
-                top: `${($(this).children()[2].getBoundingClientRect().y * -1) + ((window.innerWidth / 100) * 56.25)}px`,
-                left: `${$(this).children()[2].getBoundingClientRect().x * -1}px`,
-                duration: 0.4,
-            })
-
+                gsap.to($(this).children()[2], {
+                    top: `${($(this).children()[2].getBoundingClientRect().y * -1) + ((window.innerWidth / 100) * 56.25)}px`,
+                    left: `${$(this).children()[2].getBoundingClientRect().x * -1}px`,
+                    duration: 0.4,
+                })
+            }
             gsap.to($(gameCover), {
                 duration: 0.5,
                 onComplete: openLink,
