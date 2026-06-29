@@ -9,7 +9,12 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<input type="text" style="display:none" id="refresh" value="no">
+<script>
+    console.log(window.performance.getEntriesByType("navigation")[0].type);
+    if (String(window.performance.getEntriesByType("navigation")[0].type) === "back_forward") {
+        document.location.reload(true)
+    }
+</script>
 
 <div>
     <div id="heroContent">
@@ -44,8 +49,6 @@
 <script>
     jQuery(document).ready(function () {
         console.log("Games page loaded.");
-        var $input = $('#refresh');
-        $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
         jQuery('.gamesCol a').on('click', function(e) {
             e.preventDefault();
             link_to = $(this).attr('href');
