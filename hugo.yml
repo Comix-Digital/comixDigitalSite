@@ -14,6 +14,7 @@ params:
     icon: "images/mainblackwhitebg.png"
     text: " "
     iconHeight: 50
+timeZone: "America/Los_Angeles"
 menu:
   main:
     - identifier: games
