@@ -3,12 +3,11 @@
     flex-wrap: nowrap;
     width: 100%;
     gap: 2.5vw;
-    margin-top: -60px;
+    margin-top: -50px;
 }
 
 .gamePageNavCol {
     flex: 1 0;
-    background-color: var(--secondary);
     text-align: center;
     border: 2px solid var(--tertiary);
     background-color: #fff;

@@ -1,0 +1,64 @@
+/*
+Source - https://stackoverflow.com/a/30295086
+Posted by royhowie, modified by community. See post 'Timeline' for change history
+Retrieved 2026-07-01, License - CC BY-SA 3.0
+*/
+
+div.wrap2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+div.group input {
+    display: none;
+    left: -100%;
+    position: absolute;
+    top: -100%;
+}
+div.group input ~ div.content {
+    display: none;
+    height: auto;
+    margin: 0px 6vw;
+    position: relative;
+}
+div.group input:checked ~ div.content {
+    display: block;
+}
+div.group input:checked ~ label.previous,
+div.group input:checked ~ label.next {
+    display: block;
+}
+div.group label {
+    text-align: center;
+    border: 2px solid var(--tertiary);
+    background-color: #fff;
+    border-radius: var(--radius);
+    display: none;
+    height: 5.5vw;
+    width: 5.5vw;
+    font-size: 6vw;
+    margin: 16.875vw 0 0 0;
+    line-height: 4vw;
+    user-select: none;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+.carouselImg {
+    margin: 0 auto !important;
+    width: 60vw;
+    max-width: unset;
+    height: auto;
+}
+.carouselCaption {
+  text-align: center;
+}
+label.previous {
+  float: left;
+}
+label.next {
+    float: right;
+    text-align: right;
+}
+
+div.group label:hover {
+    transform: scale(90%);
+}
