@@ -12,9 +12,9 @@
     border: 2px solid var(--tertiary);
     background-color: #fff;
     border-radius: var(--radius);
-    padding-bottom: 1.1vw;
-    padding-top: 1.1vw;
-    font-size: 2vw;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 2.5vw;
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
@@ -35,8 +35,11 @@
 }
 
 @media (max-width: 400px) {
-  .gamePageNav {
+    .gamePageNav {
         margin-top: -120px;
+    }
+    .gamePageNavCol {
+        font-size: 3.5vw;
     }
 }
 
