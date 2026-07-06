@@ -23,7 +23,7 @@
     /* text-shadow: 1px 1px 2px rgb(0, 107, 18); */
 }
 
-#heroTitleImage {
+#tacticalDeathmatchHeroTitleImage {
     position: absolute;
     margin: auto;
     left: 0;
@@ -31,7 +31,16 @@
     text-align: center;
     width: 40vw;
     bottom: 10vw;
-    color: rgb(0, 162, 255);
+}
+
+#karlsonBetterHeroTitleImage {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 80vw;
+    bottom: -6.5vw;
 }
 
 #heroSubtitle {
