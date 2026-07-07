@@ -29,7 +29,7 @@
             <a href="karlsonmultiplayerbut1000xbetter">
                 <img src="/comixDigitalSite/images/karlsonBetterKeyart.png" alt="Karlson Multiplayer but 1000x better Keyart" id="karlsonBetterKeyart" class="gameCover">
                 <div style="position: relative;">
-                    <img src="/comixDigitalSite/images/karlsonBetterFullTextLogo.png" alt="Karlson Multiplayer but 1000x better Text Logo" id="karlsonBetterTextLogo" class="gameCoverText">
+                    <img src="/comixDigitalSite/images/karlsonBetterTextLogo.png" alt="Karlson Multiplayer but 1000x better Text Logo" id="karlsonBetterTextLogo" class="gameCoverText">
                 </div>
             </a>
         </div>
@@ -130,12 +130,12 @@
             }else if (textLogo !== null && gameCover.id == "karlsonBetterKeyart")
             {
                 gsap.to($(textLogo), {
-                    left: `${(window.innerWidth / 2) - ((window.innerWidth / 100) * 40)}px`,
+                    left: `${(window.innerWidth / 2) - ((window.innerWidth / 100) * 22.5)}px`,
                     maxWidth: "unset",
-                    width: "80vw",
+                    width: "45vw",
                     duration: 0.4,
                     margin: 0,
-                    bottom: "-8vw",
+                    bottom: "6.5vw",
                 })
 
                 gsap.to($(this).children()[2], {
