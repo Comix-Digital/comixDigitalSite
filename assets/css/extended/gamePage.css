@@ -37,6 +37,22 @@
     margin-top: 50px;
 }
 
+.karlsonGunsTable {
+    display: grid;
+    grid-template-columns: max-content 33% max-content;
+    gap: 5vw;
+}
+
+.gamePageGunDisc {
+    font-size: clamp(8px, 3vw, 16px);
+}
+
+.gamePageGunImage {
+    float: right;
+    margin: 0 !important;
+    width: auto;
+}
+
 @media (max-width: 700px) {
   .gamePageNav {
         margin-top: -100px;
