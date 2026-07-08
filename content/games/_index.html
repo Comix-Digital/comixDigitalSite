@@ -17,15 +17,13 @@
 </script>
 
 <div>
-    <div id="heroContent">
-        <div id="heroDiv">
-            <img src="/comixDigitalSite/images/tilingLogoBGWhite.png" alt="Hero Image" id="heroImage">
-            <h1 id="heroTitle">These are the games.</h1>
-            <h3 id="heroSubtitle">You are still gay!</h3>
-        </div>
+    <div style="margin: 0 auto 32px;">
+        <h1 >Games</h1>
+        <input type="checkbox" onclick="toggleVisibility()" id="modCheckbox">
+        <label for="modCheckbox">Show Mods</label>
     </div>
     <div class="flex-grid">
-        <div class="gamesCol">
+        <div class="gamesCol modCover">
             <a href="karlsonmultiplayerbut1000xbetter">
                 <img src="/comixDigitalSite/images/karlsonBetterKeyart.png" alt="Karlson Multiplayer but 1000x better Keyart" id="karlsonBetterKeyart" class="gameCover">
                 <div style="position: relative;">
@@ -41,7 +39,7 @@
                 </div>
             </a>
         </div>
-        <div class="gamesCol">
+        <div class="gamesCol modCover">
             <a href="morecombat">
                 <img src="/comixDigitalSite/images/moreCombatKeyart.png" alt="More Combat Keyart" id="moreCombatKeyart" class="gameCover">
             </a>
@@ -53,6 +51,23 @@
         </div>
     </div>
 </div>
+
+<script>
+    function toggleVisibility() {
+        const checkbox = document.getElementById("modCheckbox");
+        const modCovers = document.querySelectorAll(".modCover");
+        
+        if (checkbox.checked) {
+            modCovers.forEach(element => {
+                element.style.display = "block";
+            });
+        } else {
+            modCovers.forEach(element => {
+                element.style.display = "none";
+            });
+        }
+    }
+</script>
 
 <script>
     jQuery(document).ready(function () {
