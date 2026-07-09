@@ -1,3 +1,24 @@
+#homepageFillDiv {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/comixDigitalSite/images/tilingLogoBGWhite.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#homepageCenteredLogo {
+    position: fixed;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    max-width: 50vw;
+    max-height: 50vh;
+}
+
 #heroContent {
     margin-bottom: 50vw;
 }
