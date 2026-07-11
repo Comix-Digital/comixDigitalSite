@@ -21,9 +21,9 @@ menu:
       name: Games
       url: /games/
       weight: 10
-    - identifier: test
-      name: Test
-      url: /test/
+    - identifier: about
+      name: About
+      url: /about/
       weight: 20
 caches:
   images:
