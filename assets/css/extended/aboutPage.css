@@ -1,9 +1,9 @@
 .aboutMembersGrid {
     display: grid;
     grid-template-columns: max-content 50%;
-    gap: 5vw;
+    gap: 20px;
 }
 
 .aboutMemberText {
-    padding: 15px 0 0 0;
+    padding: 12px 0 0 0;
 }
