@@ -8,7 +8,7 @@ tags: []
 categories: []
 hiddenInHomeList: true
 ---
-![](/comixDigitalSite/images/karlsonBetterUpdatePoll.png)
+![](/images/karlsonBetterUpdatePoll.png)
 
 Option 1. No Parkour Mode
 
