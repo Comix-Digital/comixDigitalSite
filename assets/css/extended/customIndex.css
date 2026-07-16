@@ -1,7 +1,7 @@
 #homepageFillDiv {
     width: 100vw;
     height: 100vh;
-    background-image: url('/images/tilingLogoBGWhite.png');
+    background-image: url('/images/ninballTileBGLarge.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,10 +13,19 @@
 #homepageCenteredLogo {
     position: fixed;
     left: 50vw;
-    top: 50vh;
+    top: 45vh;
     transform: translate(-50%, -50%);
     max-width: 50vw;
     max-height: 50vh;
+}
+
+#questionMarkButton {
+    position: fixed;
+    left: 50vw;
+    top: 80vh;
+    transform: translate(-50%, -50%);
+    max-width: 15vw;
+    max-height: 15vh;
 }
 
 #heroContent {
@@ -62,6 +71,17 @@
     text-align: center;
     width: 45vw;
     bottom: 8vw;
+}
+
+.ninballSocialsHero {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 6vw;
+    bottom: 15vw;
+    fill: rgb(225, 225, 225);
 }
 
 #heroSubtitle {
